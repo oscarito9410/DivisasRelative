@@ -1,0 +1,83 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context="com.sergioesperon.divisasrelative.MainActivity">
+
+   <ImageView
+       android:id="@+id/imgUsa"
+       android:layout_width="35dp"
+       android:layout_height="35dp"
+       android:src="@mipmap/ic_usa"
+       />
+
+    <EditText
+        android:id="@+id/txtUsa"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_toRightOf="@id/imgUsa"
+        android:inputType="numberDecimal"
+        android:hint="INGRESE LA CANTIDAD EN DOLARES"
+        />
+
+    <ImageView
+        android:id="@+id/imgMex"
+        android:layout_width="35dp"
+        android:layout_height="35dp"
+        android:src="@mipmap/ic_mexico"
+        android:layout_below="@id/txtUsa"/>
+
+    <EditText
+        android:id="@+id/txtMex"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/txtUsa"
+        android:layout_toRightOf="@id/imgMex"
+        android:hint="INGRESE LA CANTIDAD EN PESOS"
+        />
+
+    <RadioGroup
+        android:id="@+id/rg"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/txtMex"
+        android:orientation="horizontal"
+        android:layout_centerHorizontal="true">
+        <RadioButton
+            android:id="@+id/rbUsa"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Dolares a Pesos"
+            android:checked="true"
+        />
+        <RadioButton
+            android:id="@+id/rbMex"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Pesos a Dolares"
+        />
+    </RadioGroup>
+
+    <Button
+        android:id="@+id/btnAccion"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/rg"
+        android:text="Convertir"
+        />
+
+    <TextView
+        android:id="@+id/tvResult"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/btnAccion"
+        android:layout_centerHorizontal="true"
+        android:text="Aquí se mostrara la conversión"
+        android:textColor="#f40000"
+        android:textSize="20dp"
+        android:layout_margin="5dp"
+        />
+
+</RelativeLayout>
